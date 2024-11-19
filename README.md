@@ -1,4 +1,5 @@
 === Spotiembed for Elementor  ===
+
 Contributors: biozalp
 Donate link: https://buymeacoffee.com/biozalp
 Tags: spotify, spotify embed, spotify playlist, spotify album, spotify track, SCF Spotify Link, ACF Spotify Link, ACF, SCF
