@@ -7,19 +7,19 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-class Spotify_Embed_Widget extends \Elementor\Widget_Base {
+class Spotiembed_Widget extends \Elementor\Widget_Base {
     /**
      * Get widget name
      */
     public function get_name() {
-        return 'spotify_embed';
+        return 'spotiembed';
     }
 
     /**
      * Get widget title
      */
     public function get_title() {
-        return esc_html__('Spotify Embed', 'spotify-embed-elementor');
+        return esc_html__('Spotiembed', 'spotiembed-elementor');
     }
 
     /**
@@ -50,7 +50,7 @@ class Spotify_Embed_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => esc_html__('Content', 'spotify-embed-elementor'),
+                'label' => esc_html__('Content', 'spotiembed-elementor'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -58,7 +58,7 @@ class Spotify_Embed_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'spotify_url',
             [
-                'label' => esc_html__('Spotify URL', 'spotify-embed-elementor'),
+                'label' => esc_html__('Spotify URL', 'spotiembed-elementor'),
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'dynamic' => [
                     'active' => true,
@@ -68,8 +68,8 @@ class Spotify_Embed_Widget extends \Elementor\Widget_Base {
                         \Elementor\Modules\DynamicTags\Module::POST_META_CATEGORY,
                     ],
                 ],
-                'placeholder' => esc_html__('Enter Spotify URL', 'spotify-embed-elementor'),
-                'description' => esc_html__('Enter the URL of a Spotify track, album, or playlist. Supports ACF fields.', 'spotify-embed-elementor'),
+                'placeholder' => esc_html__('Enter Spotify URL', 'spotiembed-elementor'),
+                'description' => esc_html__('Enter the URL of a Spotify track, album, or playlist. Supports ACF fields.', 'spotiembed-elementor'),
             ]
         );
 
@@ -77,10 +77,10 @@ class Spotify_Embed_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'fallback_url',
             [
-                'label' => esc_html__('Fallback URL', 'spotify-embed-elementor'),
+                'label' => esc_html__('Fallback URL', 'spotiembed-elementor'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'placeholder' => esc_html__('Enter fallback Spotify URL', 'spotify-embed-elementor'),
-                'description' => esc_html__('This URL will be used if the dynamic URL is empty', 'spotify-embed-elementor'),
+                'placeholder' => esc_html__('Enter fallback Spotify URL', 'spotiembed-elementor'),
+                'description' => esc_html__('This URL will be used if the dynamic URL is empty', 'spotiembed-elementor'),
                 'condition' => [
                     'spotify_url[url]!' => '',
                 ],
@@ -93,7 +93,7 @@ class Spotify_Embed_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => esc_html__('Style', 'spotify-embed-elementor'),
+                'label' => esc_html__('Style', 'spotiembed-elementor'),
                 'tab' => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
@@ -101,7 +101,7 @@ class Spotify_Embed_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'embed_height',
             [
-                'label' => esc_html__('Height', 'spotify-embed-elementor'),
+                'label' => esc_html__('Height', 'spotiembed-elementor'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -116,7 +116,7 @@ class Spotify_Embed_Widget extends \Elementor\Widget_Base {
                     'size' => 352,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .spotify-embed-container iframe' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .spotiembed-elementor iframe' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -204,14 +204,14 @@ class Spotify_Embed_Widget extends \Elementor\Widget_Base {
         }
 
         // Add error handling class
-        $container_class = 'spotify-embed-container';
+        $container_class = 'spotiembed-container';
         if (!wp_http_validate_url($embed_url)) {
-            $container_class .= ' spotify-embed-error';
+            $container_class .= ' spotiembed-error';
         }
         ?>
         <div class="<?php echo esc_attr($container_class); ?>">
             <iframe 
-                src="<?php echo $embed_url; ?>"
+                src="<?php echo esc_url($embed_url); ?>"
                 width="100%" 
                 frameborder="0" 
                 allowfullscreen="" 
@@ -246,9 +246,9 @@ class Spotify_Embed_Widget extends \Elementor\Widget_Base {
                 embedUrl = embedUrl.replace('spotify.com', 'spotify.com/embed');
             }
         #>
-            <div class="spotify-embed-container">
+            <div class="sspotiembed-container">
                 <iframe 
-                    src="{{ embedUrl }}"
+                    src="{{{ embedUrl }}}"
                     width="100%" 
                     frameborder="0" 
                     allowfullscreen="" 

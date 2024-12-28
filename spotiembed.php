@@ -17,7 +17,7 @@
 /**
  * Main Plugin Class
  */
-final class Spotify_Embed_Elementor_Widget {
+final class Spotiembed {
     /**
      * Plugin Version
      */
