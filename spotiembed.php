@@ -55,7 +55,7 @@ final class Spotiembed {
      * Load Textdomain
      */
     public function i18n() {
-        load_plugin_textdomain('spotify-embed-elementor');
+        load_plugin_textdomain('spotiembed-elementor');
     }
 
     /**
@@ -86,7 +86,7 @@ final class Spotiembed {
 
         return sprintf(
             wp_kses(
-                __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" to be installed and activated.</p></div>', 'spotify-embed-elementor'),
+                __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" to be installed and activated.</p></div>', 'spotiembed-elementor'),
                 [
                     'div' => [
                         'class' => [],
@@ -94,8 +94,8 @@ final class Spotiembed {
                     'p' => [],
                 ]
             ),
-            '<strong>' . esc_html__('Spotify Embed Elementor Widget', 'spotify-embed-elementor') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'spotify-embed-elementor') . '</strong>'
+            '<strong>' . esc_html__('Spotiembed Elementor Widget', 'spotiembed-elementor') . '</strong>',
+            '<strong>' . esc_html__('Elementor', 'spotiembed-elementor') . '</strong>'
         );
     }
 
@@ -107,7 +107,7 @@ final class Spotiembed {
 
         return sprintf(
             wp_kses(
-                __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" version %3$s or greater.</p></div>', 'spotify-embed-elementor'),
+                __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" version %3$s or greater.</p></div>', 'spotiembed-elementor'),
                 [
                     'div' => [
                         'class' => [],
@@ -115,8 +115,8 @@ final class Spotiembed {
                     'p' => [],
                 ]
             ),
-            '<strong>' . esc_html__('Spotify Embed Elementor Widget', 'spotify-embed-elementor') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'spotify-embed-elementor') . '</strong>',
+            '<strong>' . esc_html__('Spotiembed Elementor Widget', 'spotiembed-elementor') . '</strong>',
+            '<strong>' . esc_html__('Elementor', 'spotiembed-elementor') . '</strong>',
             self::MINIMUM_ELEMENTOR_VERSION
         );
     }
@@ -125,7 +125,7 @@ final class Spotiembed {
      * Register Widgets
      */
     public function register_widgets($widgets_manager) {
-        require_once(__DIR__ . '/widgets/class-spotify-embed-widget.php');
+        require_once(__DIR__ . '/widgets/class-spotiembed-widget.php');
         $widgets_manager->register(new \Spotify_Embed_Widget());
     }
 }
