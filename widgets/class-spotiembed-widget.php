@@ -19,7 +19,7 @@ class Spotiembed_Widget extends \Elementor\Widget_Base {
      * Get widget title
      */
     public function get_title() {
-        return esc_html__('Spotiembed', 'spotiembed-elementor');
+        return esc_html__('Spotiembed', 'spotiembed');
     }
 
     /**
@@ -50,7 +50,7 @@ class Spotiembed_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'content_section',
             [
-                'label' => esc_html__('Content', 'spotiembed-elementor'),
+                'label' => esc_html__('Content', 'spotiembed'),
                 'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -58,7 +58,7 @@ class Spotiembed_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'spotify_url',
             [
-                'label' => esc_html__('Spotify URL', 'spotiembed-elementor'),
+                'label' => esc_html__('Spotify URL', 'spotiembed'),
                 'type' => \Elementor\Controls_Manager::TEXT,
                 'dynamic' => [
                     'active' => true,
@@ -68,8 +68,8 @@ class Spotiembed_Widget extends \Elementor\Widget_Base {
                         \Elementor\Modules\DynamicTags\Module::POST_META_CATEGORY,
                     ],
                 ],
-                'placeholder' => esc_html__('Enter Spotify URL', 'spotiembed-elementor'),
-                'description' => esc_html__('Enter the URL of a Spotify track, album, or playlist. Supports ACF fields.', 'spotiembed-elementor'),
+                'placeholder' => esc_html__('Enter Spotify URL', 'spotiembed'),
+                'description' => esc_html__('Enter the URL of a Spotify track, album, or playlist. Supports ACF fields.', 'spotiembed'),
             ]
         );
 
@@ -77,10 +77,10 @@ class Spotiembed_Widget extends \Elementor\Widget_Base {
         $this->add_control(
             'fallback_url',
             [
-                'label' => esc_html__('Fallback URL', 'spotiembed-elementor'),
+                'label' => esc_html__('Fallback URL', 'spotiembed'),
                 'type' => \Elementor\Controls_Manager::TEXT,
-                'placeholder' => esc_html__('Enter fallback Spotify URL', 'spotiembed-elementor'),
-                'description' => esc_html__('This URL will be used if the dynamic URL is empty', 'spotiembed-elementor'),
+                'placeholder' => esc_html__('Enter fallback Spotify URL', 'spotiembed'),
+                'description' => esc_html__('This URL will be used if the dynamic URL is empty', 'spotiembed'),
                 'condition' => [
                     'spotify_url[url]!' => '',
                 ],
@@ -93,7 +93,7 @@ class Spotiembed_Widget extends \Elementor\Widget_Base {
         $this->start_controls_section(
             'style_section',
             [
-                'label' => esc_html__('Style', 'spotiembed-elementor'),
+                'label' => esc_html__('Style', 'spotiembed'),
                 'tab' => \Elementor\Controls_Manager::TAB_STYLE,
             ]
         );
@@ -101,7 +101,7 @@ class Spotiembed_Widget extends \Elementor\Widget_Base {
         $this->add_responsive_control(
             'embed_height',
             [
-                'label' => esc_html__('Height', 'spotiembed-elementor'),
+                'label' => esc_html__('Height', 'spotiembed'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -116,7 +116,7 @@ class Spotiembed_Widget extends \Elementor\Widget_Base {
                     'size' => 352,
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .spotiembed-elementor iframe' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .spotiembed iframe' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );

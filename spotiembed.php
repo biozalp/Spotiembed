@@ -55,7 +55,7 @@ final class Spotiembed {
      * Load Textdomain
      */
     public function i18n() {
-        load_plugin_textdomain('spotiembed-elementor');
+        load_plugin_textdomain('spotiembed');
     }
 
     /**
@@ -86,7 +86,7 @@ final class Spotiembed {
 
         return sprintf(
             wp_kses(
-                __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" to be installed and activated.</p></div>', 'spotiembed-elementor'),
+                __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" to be installed and activated.</p></div>', 'spotiembed'),
                 [
                     'div' => [
                         'class' => [],
@@ -94,8 +94,8 @@ final class Spotiembed {
                     'p' => [],
                 ]
             ),
-            '<strong>' . esc_html__('Spotiembed Elementor Widget', 'spotiembed-elementor') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'spotiembed-elementor') . '</strong>'
+            '<strong>' . esc_html__('Spotiembed Elementor Widget', 'spotiembed') . '</strong>',
+            '<strong>' . esc_html__('Elementor', 'spotiembed') . '</strong>'
         );
     }
 
@@ -107,7 +107,7 @@ final class Spotiembed {
 
         return sprintf(
             wp_kses(
-                __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" version %3$s or greater.</p></div>', 'spotiembed-elementor'),
+                __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" version %3$s or greater.</p></div>', 'spotiembed'),
                 [
                     'div' => [
                         'class' => [],
@@ -115,8 +115,8 @@ final class Spotiembed {
                     'p' => [],
                 ]
             ),
-            '<strong>' . esc_html__('Spotiembed Elementor Widget', 'spotiembed-elementor') . '</strong>',
-            '<strong>' . esc_html__('Elementor', 'spotiembed-elementor') . '</strong>',
+            '<strong>' . esc_html__('Spotiembed Elementor Widget', 'spotiembed') . '</strong>',
+            '<strong>' . esc_html__('Elementor', 'spotiembed') . '</strong>',
             self::MINIMUM_ELEMENTOR_VERSION
         );
     }
