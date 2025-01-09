@@ -26,7 +26,7 @@ class Spotiembed_Widget extends \Elementor\Widget_Base {
      * Get widget icon
      */
     public function get_icon() {
-        return 'eicon-code';
+        return 'eicon-headphones';
     }
 
     /**
