@@ -126,9 +126,9 @@ final class Spotiembed {
      */
     public function register_widgets($widgets_manager) {
         require_once(__DIR__ . '/widgets/class-spotiembed-widget.php');
-        $widgets_manager->register(new \Spotify_Embed_Widget());
+        $widgets_manager->register(new \Spotiembed_Widget());
     }
 }
 
 // Initialize the plugin
-Spotify_Embed_Elementor_Widget::instance();
+Spotiembed::instance();
