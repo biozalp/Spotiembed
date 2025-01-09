@@ -86,6 +86,7 @@ final class Spotiembed {
 
         return sprintf(
             wp_kses(
+                // translators: 1: Plugin name, 2: Required plugin name
                 __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" to be installed and activated.</p></div>', 'spotiembed'),
                 [
                     'div' => [
@@ -107,6 +108,7 @@ final class Spotiembed {
 
         return sprintf(
             wp_kses(
+                // translators: 1: Plugin name, 2: Required plugin name, 3: Required version number
                 __('<div class="notice notice-warning is-dismissible"><p>"%1$s" requires "%2$s" version %3$s or greater.</p></div>', 'spotiembed'),
                 [
                     'div' => [
