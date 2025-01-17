@@ -10,7 +10,7 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-A simple plugin which adds an Elementor widget to usable widget library.
+A simple plugin which adds an Elementor widget to usable widget library. The plugin enables option to use embeded URL from post editor with Theme Builder and templates.
 
 == Description ==
 
