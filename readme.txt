@@ -5,7 +5,7 @@ Donate link: https://buymeacoffee.com/biozalp
 Tags: spotify, spotify embed, SCF Spotify Link, ACF Spotify Link, ACF
 Requires at least: 4.7
 Tested up to: 6.7
-Stable tag: 1.0.3
+Stable tag: 1.0.4
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -43,6 +43,9 @@ Get the GitHub repo in zip format and upload from "Install Plugin" pane in Wordp
 2. spotiembed-ss-2.jpg
 
 == Changelog ==
+
+= 1.0.4 =
+* Fixed bug with SCF/ACF fields
 
 = 1.0.3 =
 * Fixed bug with SCF/ACF fields
