@@ -3,7 +3,7 @@
  * @wordpress-plugin
  * Plugin Name: Spotiembed
  * Description: A simple plugin which adds an Elementor widget to usable widget library.
- * Version: 1.0.4
+ * Version: 1.1
  * Author: Berk Ilgar Ozalp
  * Author URI: https://biozalp.com/
  * License: GPL-2.0+	 
@@ -21,7 +21,7 @@ final class Spotiembed {
     /**
      * Plugin Version
      */
-    const VERSION = '1.0.1';
+    const VERSION = '1.1';
 
     /**
      * Minimum Elementor Version

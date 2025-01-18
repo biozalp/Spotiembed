@@ -145,6 +145,7 @@ class Spotiembed_Admin {
                     <div>
                         <h1><?php echo esc_html(get_admin_page_title()); ?></h1>
                         <p style="margin: 10px 0 0; opacity: 0.9;">Easily embed Spotify content in your WordPress posts and pages</p>
+                        <p class="description" style="margin: 5px 0 0; font-size: 12px;">Version <?php echo esc_html($this->version); ?></p>
                     </div>
                 </div>
 
