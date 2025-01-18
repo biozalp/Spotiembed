@@ -49,6 +49,20 @@ final class Spotiembed {
     public function __construct() {
         add_action('init', [$this, 'i18n']);
         add_action('plugins_loaded', [$this, 'init']);
+        
+        // Load admin functionality
+        if (is_admin()) {
+            require_once plugin_dir_path(__FILE__) . 'admin/class-spotiembed-admin.php';
+            $admin = new Spotiembed_Admin('spotiembed', self::VERSION);
+            add_action('admin_enqueue_scripts', [$admin, 'enqueue_styles']);
+            add_action('admin_enqueue_scripts', [$admin, 'enqueue_scripts']);
+            add_action('admin_menu', [$admin, 'add_admin_menu']);
+            add_action('admin_init', [$admin, 'register_settings']);
+            
+            // Add meta box hooks
+            add_action('add_meta_boxes', [$admin, 'register_meta_box']);
+            add_action('save_post', [$admin, 'save_meta_box']);
+        }
     }
 
     /**
@@ -76,6 +90,10 @@ final class Spotiembed {
 
         // Register Widget
         add_action('elementor/widgets/register', [$this, 'register_widgets']);
+
+        // Load Elementor dynamic tags
+        require_once(__DIR__ . '/includes/elementor/module.php');
+        new \Spotiembed\Includes\Elementor\Module();
     }
 
     /**
