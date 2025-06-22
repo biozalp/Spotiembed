@@ -3,10 +3,10 @@
  * @wordpress-plugin
  * Plugin Name: Spotiembed
  * Description: A simple plugin which adds an Elementor widget to usable widget library.
- * Version: 1.1
+ * Version: 1.1.1
  * Author: Berk Ilgar Ozalp
  * Author URI: https://biozalp.com/
- * License: GPL-2.0+	 
+ * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
@@ -21,7 +21,7 @@ final class Spotiembed {
     /**
      * Plugin Version
      */
-    const VERSION = '1.1';
+    const VERSION = '1.1.1';
 
     /**
      * Minimum Elementor Version
@@ -49,7 +49,7 @@ final class Spotiembed {
     public function __construct() {
         add_action('init', [$this, 'i18n']);
         add_action('plugins_loaded', [$this, 'init']);
-        
+
         // Load admin functionality
         if (is_admin()) {
             require_once plugin_dir_path(__FILE__) . 'admin/class-spotiembed-admin.php';
@@ -58,7 +58,7 @@ final class Spotiembed {
             add_action('admin_enqueue_scripts', [$admin, 'enqueue_scripts']);
             add_action('admin_menu', [$admin, 'add_admin_menu']);
             add_action('admin_init', [$admin, 'register_settings']);
-            
+
             // Add meta box hooks
             add_action('add_meta_boxes', [$admin, 'register_meta_box']);
             add_action('save_post', [$admin, 'save_meta_box']);
