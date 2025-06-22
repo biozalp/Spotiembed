@@ -5,7 +5,7 @@ Donate link: https://buymeacoffee.com/biozalp
 Tags: spotify, spotify embed, SCF Spotify Link, ACF Spotify Link, ACF
 Requires at least: 4.7
 Tested up to: 6.8.1
-Stable tag: 1.1.1
+Stable tag: 1.1.2
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
